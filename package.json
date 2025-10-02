@@ -1,0 +1,116 @@
+{
+  "name": "quicktick",
+  "displayName": "QuickTick",
+  "description": "Project-specific todo list manager with persistent storage for VS Code",
+  "version": "0.0.1",
+  "publisher": "sayedabdulkarim",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Other"],
+  "keywords": [
+    "todo",
+    "task",
+    "list",
+    "productivity",
+    "project management"
+  ],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "quicktick.togglePanel",
+        "title": "QuickTick: Toggle Todo Panel"
+      },
+      {
+        "command": "quicktick.addTodo",
+        "title": "QuickTick: Add New Todo"
+      },
+      {
+        "command": "quicktick.clearCompleted",
+        "title": "QuickTick: Clear Completed Todos"
+      },
+      {
+        "command": "quicktick.resetAll",
+        "title": "QuickTick: Reset All Todos"
+      },
+      {
+        "command": "quicktick.exportTodos",
+        "title": "QuickTick: Export Todos as Markdown"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "quicktick.togglePanel",
+        "key": "alt+t",
+        "mac": "cmd+t",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "quicktick.addTodo",
+        "key": "alt+shift+t",
+        "mac": "cmd+shift+t",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "QuickTick",
+      "properties": {
+        "quicktick.storageLocation": {
+          "type": "string",
+          "default": "workspace",
+          "enum": ["workspace", "project"],
+          "description": "Where to store todos: workspace (VS Code storage) or project (.vscode folder)"
+        },
+        "quicktick.panelPosition": {
+          "type": "string",
+          "default": "right",
+          "enum": ["left", "right"],
+          "description": "Position of the todo panel"
+        },
+        "quicktick.showCompletedTodos": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show completed todos in the list"
+        },
+        "quicktick.enableAnimations": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable animations in the todo panel"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "typescript": "^4.9.3",
+    "@vscode/test-electron": "^2.2.0",
+    "@vscode/vsce": "^2.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sayedabdulkarim/quicktick"
+  },
+  "bugs": {
+    "url": "https://github.com/sayedabdulkarim/quicktick/issues"
+  },
+  "homepage": "https://github.com/sayedabdulkarim/quicktick#readme",
+  "license": "MIT"
+}
