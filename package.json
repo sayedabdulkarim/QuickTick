@@ -2,13 +2,15 @@
   "name": "quicktick",
   "displayName": "QuickTick",
   "description": "Project-specific todo list manager with persistent storage for VS Code",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "publisher": "sayedabdulkarim",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.74.0"
   },
-  "categories": ["Other"],
+  "categories": [
+    "Other"
+  ],
   "keywords": [
     "todo",
     "task",
@@ -16,7 +18,9 @@
     "productivity",
     "project management"
   ],
-  "activationEvents": ["onStartupFinished"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -62,13 +66,19 @@
         "quicktick.storageLocation": {
           "type": "string",
           "default": "workspace",
-          "enum": ["workspace", "project"],
+          "enum": [
+            "workspace",
+            "project"
+          ],
           "description": "Where to store todos: workspace (VS Code storage) or project (.vscode folder)"
         },
         "quicktick.panelPosition": {
           "type": "string",
           "default": "right",
-          "enum": ["left", "right"],
+          "enum": [
+            "left",
+            "right"
+          ],
           "description": "Position of the todo panel"
         },
         "quicktick.showCompletedTodos": {
