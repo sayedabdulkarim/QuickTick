@@ -43,8 +43,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/sayedabdulkarim/quicktick.git
-cd quicktick
+git clone https://github.com/sayedabdulkarim/QuickTick.git
+cd QuickTick
 
 # Install dependencies
 npm install
@@ -276,8 +276,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 💬 Support
 
-- **Issues**: [GitHub Issues](https://github.com/sayedabdulkarim/quicktick/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/sayedabdulkarim/quicktick/discussions)
+- **Issues**: [GitHub Issues](https://github.com/sayedabdulkarim/QuickTick/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/sayedabdulkarim/QuickTick/discussions)
 
 ---
 

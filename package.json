@@ -106,11 +106,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sayedabdulkarim/quicktick"
+    "url": "https://github.com/sayedabdulkarim/QuickTick"
   },
   "bugs": {
-    "url": "https://github.com/sayedabdulkarim/quicktick/issues"
+    "url": "https://github.com/sayedabdulkarim/QuickTick/issues"
   },
-  "homepage": "https://github.com/sayedabdulkarim/quicktick#readme",
+  "homepage": "https://github.com/sayedabdulkarim/QuickTick#readme",
   "license": "MIT"
 }
