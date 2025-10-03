@@ -4,20 +4,33 @@
 
 ## 📸 Screenshots
 
-### Todo Panel Open
-**Status bar shows todo count, panel displays interactive todo list**
+### Todo Panel with Active Tasks
 
-![Todo Panel Open](images/panel-open.png)
+**Look for the `📝 Todos (n)` indicator in the bottom-right corner of your status bar. Click it to open the todo panel.**
 
-### Status Bar Indicator
-**Bottom-right corner shows pending todo count**
+![Todo Panel with Tasks](images/quickTickwithTask.png)
 
-![Status Bar](images/status-bar.png)
+*The extension shows your todos in an interactive panel with checkboxes, progress bar, and filter options*
 
-### Dark Theme Support
-**Seamlessly adapts to your VS Code theme**
+### All Tasks Completed
 
-![Dark Theme](images/dark-theme.png)
+**When all tasks are done, the status bar shows `✅ All done!` with a celebration animation**
+
+![All Tasks Done](images/quickTickAllDone.png)
+
+*The panel displays a 100% progress bar and completed status when all todos are finished*
+
+## 🚀 Getting Started
+
+### Where to Find QuickTick
+
+After installing QuickTick, look at the **bottom-right corner of your VS Code status bar**. You'll see:
+
+- `📝 Todos (0)` - When you have no tasks
+- `📝 Todos (5)` - Shows number of pending tasks
+- `✅ All done!` - When all tasks are completed
+
+**Click this indicator to open the todo panel!**
 
 ## ✨ Features
 
@@ -116,13 +129,13 @@ Access settings through VS Code Settings or add to your `settings.json`:
 {
   // Where to store todos
   "quicktick.storageLocation": "workspace",
-  
+
   // Panel position
   "quicktick.panelPosition": "right",
-  
+
   // Show completed todos
   "quicktick.showCompletedTodos": true,
-  
+
   // Enable animations
   "quicktick.enableAnimations": true
 }
